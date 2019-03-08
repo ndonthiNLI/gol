@@ -20,7 +20,7 @@ pipeline {
       // define step to run
       steps {
         //invoke command to stop tomcat service
-        bat 'sc stop Tomcat'
+        bat 'sc stop Tomcat7'
         bat 'ping 127.0.0.1 -n 6'
         // copy war file from build target to webapp Tomcat folder
         bat 'xcopy /y C:\\jenkins_slave\\workspace\\golPipeline\\gameoflife-web\\target\\gameoflife.war "C:\\InstalledTools\\Tomcat7\\webapps"'
